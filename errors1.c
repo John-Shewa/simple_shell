@@ -24,7 +24,7 @@ int _erratio(char *s)
 		else
 			return (-1);
 	}
-	result (result);
+	return (result);
 }
 
 /**
@@ -46,10 +46,10 @@ void print_error(intfo_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integral) 
+ * print_d - function prints a decimal (integral)
  * number (base 10)
  * @input: the input
- * @fd: the filedescriptor to write to 
+ * @fd: the filedescriptor to write to
  * Return: number of characters printed
  */
 int print_d(int input, int fd)
@@ -74,7 +74,7 @@ int print_d(int input, int fd)
 		if (_abs_ / i)
 		{
 			__putchar('0' + current / i);
-			count ++;
+			count++;
 		}
 		current %= i;
 	}
@@ -111,7 +111,7 @@ char *convert_number(long int num, int base, int flags)
 		*--ptr = array[n % base];
 		n /= base;
 	} while (n != 0);
-	
+
 	if (sign)
 		*--ptr = sign;
 	return (ptr);
