@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _erratoi - converts a string to an integer
+ * _erratio - converts a string to an integer
  * @s: the string to be converted
  * Return: 0 if no numbers in string, converted number
  * otherwise -1 on error
@@ -34,7 +34,7 @@ int _erratio(char *s)
  * Return: 0 if no numbers in string, converted number
  * otherwise -1 on error
  */
-void print_error(intfo_t *info, char *estr)
+void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
 	_eputs(": ");
@@ -99,7 +99,7 @@ char *convert_number(long int num, int base, int flags)
 	char *ptr;
 	unsigned long n = num;
 
-	if (!(flags & CONVERT_UNSINGED) && num < 0)
+	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
 		sign = '-';

@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef SHELL_H_
+#define SHELL_H_
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -97,7 +97,7 @@ typedef struct passinfo
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
 /**
- * structbuiltin - contains a builtin string and realated function
+ * struct builtin - contains a builtin string and realated function
  * @type: builting command flag
  * @func: the function
  */
@@ -184,7 +184,7 @@ int _getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
 /* toem_getinfo.c */
-void clear_info(info _t *);
+void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
@@ -217,7 +217,7 @@ void free_list(list_t **);
 /* toem_lists1.c */
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
-size_t print_list(cons list_t *);
+size_t print_list(const list_t *);
 list_t *node_starts_with(list_t *, char *, char);
 ssize_t get_node_index(list_t *, list_t *);
 
