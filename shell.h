@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef SHELL_H_
+#define SHELL_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -100,9 +100,15 @@ typedef struct passinfo
 	0, 0, 0}
 
 /**
+<<<<<<< HEAD
  *struct builtin - contains a builtin string and related function
  *@type: the builtin command flag
  *@func: the function
+=======
+ * struct builtin - contains a builtin string and realated function
+ * @type: builting command flag
+ * @func: the function
+>>>>>>> 95f239cad48478633ce4edc74133e2749378f4b4
  */
 typedef struct builtin
 {
