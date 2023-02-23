@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * _erratio - converts a string to an integer
  * @s: the string to be converted
@@ -133,5 +134,3 @@ void remove_comments(char *buf)
 			break;
 		}
 }
-
-
